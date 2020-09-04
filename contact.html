@@ -8,5 +8,16 @@
 <body>
     <p><strong>Phone:</strong> (xxx) xxx-xxxx</p>
     <p><strong>Email:</strong> something@somewhere.com</p>
+
+    <form action="mailto:someEmail@email.com" enctype="text/plain" method="post">
+        <label for="mailing-list">Join my readers' list! Enter your email:</label>
+        <input type="email" id="mailing-list" name="email"><br>
+
+        <label for="message">Send me something:</label><br>
+        <textarea id="message" name="message" cols="30" rows="10"></textarea><br>
+
+        <label for="submit-message"></label>
+        <input type="submit" id=submit-message>
+    </form>
 </body>
 </html>
