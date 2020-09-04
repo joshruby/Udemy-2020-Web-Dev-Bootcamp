@@ -9,6 +9,7 @@
     - [Tags](#tags)
     - [Comments](#comments)
     - [HTML Boilerplate](#html-boilerplate)
+  - [Intermediate HTML](#intermediate-html)
 
 ## Introduction to HTML
 
@@ -18,18 +19,20 @@ Emmet abbreviations can be found at emmet.io.
 
 ### Tags
 
-Most tags need to be closed explicitly. Some, like ```<br>``` or ```<hr>``` don't (or can't). The rules can be found in the "tag omission" section of each tag's doc page.
+Most tags need to be closed explicitly. Some, like `<br>` or `<hr>` don't (or can't). The rules can be found in the "tag omission" section of each tag's doc page.
 
 Each tag can also accept certain attributes such as size or color.
 
 ### Comments
 
-HTML comment syntax is kind of clunky but this is how it looks: ```<!-- I'm a comment -->```.
+HTML comment syntax is kind of clunky but this is how it looks: `<!-- I'm a comment -->`.
 
 ### HTML Boilerplate
 
-Meta tags are supplied in the ```<head>``` section of HTML files.
+Meta tags are supplied in the `<head>` section of HTML files.
 
-Unicode UTF-8 (```<meta charset="UTF-8">```) should be used as the default encoding attribute. In addition to text scripts, Unicode also has other non-text symbols like emojis.
+Unicode UTF-8 (`<meta charset="UTF-8">`) should be used as the default encoding attribute. In addition to text scripts, Unicode also has other non-text symbols like emojis.
 
-The ```description``` meta-element attribute sets the text that will be displayed under the title of the webpage in search engine results.
+The `description` meta-element attribute sets the text that will be displayed under the title of the webpage in search engine results.
+
+## Intermediate HTML
