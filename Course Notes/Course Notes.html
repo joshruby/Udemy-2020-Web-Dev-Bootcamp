@@ -5,7 +5,8 @@
         <title>Udemy - 2020 Web Dev Bootcamp</title>
         <style>
 </style>
-        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
 <style>
@@ -19,7 +20,7 @@
 .task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
 </style>
         
-        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
         
     </head>
     <body class="vscode-light">
@@ -36,11 +37,18 @@
 <li><a href="#html-boilerplate">HTML Boilerplate</a></li>
 </ul>
 </li>
+<li><a href="#intermediate-html">Intermediate HTML</a>
+<ul>
+<li><a href="#tables">Tables</a></li>
+<li><a href="#forms">Forms</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <h2 id="introduction-to-html">Introduction to HTML</h2>
 <p>Aggregated web dev doumentation can be found at <a href="http://devdocs.io">devdocs.io</a>.</p>
+<p>MDN uses thumbs down symbols to denote things that are deprecated.</p>
 <p>Emmet abbreviations can be found at <a href="http://emmet.io">emmet.io</a>.</p>
 <h3 id="tags">Tags</h3>
 <p>Most tags need to be closed explicitly. Some, like <code>&lt;br&gt;</code> or <code>&lt;hr&gt;</code> don't (or can't). The rules can be found in the &quot;tag omission&quot; section of each tag's doc page.</p>
@@ -51,6 +59,18 @@
 <p>Meta tags are supplied in the <code>&lt;head&gt;</code> section of HTML files.</p>
 <p>Unicode UTF-8 (<code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>) should be used as the default encoding attribute. In addition to text scripts, Unicode also has other non-text symbols like emojis.</p>
 <p>The <code>description</code> meta-element attribute sets the text that will be displayed under the title of the webpage in search engine results.</p>
+<h2 id="intermediate-html">Intermediate HTML</h2>
+<h3 id="tables">Tables</h3>
+<p>Tables are used to display organized data or as a tool to style webpage elements direclty in HTML (or later in CSS). Header and footer rows can be called out explicitly or via <code>&lt;th&gt;</code> and <code>&lt;tf&gt;</code> tags. Most of the table styling attributes in HTML are deprecated. Styling should be done with CSS in practice.</p>
+<p>Tables can be nested inside of tables. This is useful if you want to keep blocks of information grouped together within a larger table. I.e., you can make a <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> x <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> table where each element <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mrow><mi>m</mi><mo separator="true">,</mo><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">T_{m, n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> is itself an arbitrarily sized table.</p>
+<h3 id="forms">Forms</h3>
+<p>Forms are used to collect user inputs. Within the <code>&lt;form&gt;</code> element <code>&lt;input&gt;</code>s elements are specified along with a type attribute. Many default input types exist with built-in functionalities (see docs). Default input types are styled automatically and will look different across browsers.</p>
+<p><code>&lt;label&gt;</code>s can either wrap <code>&lt;input&gt;</code>s or be associated with them via the <code>for=&quot;&quot;</code> and <code>id=&quot;&quot;</code> attributes, like so:</p>
+<pre><code class="language-HTML"><div>    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"index.html"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"mailing-list"</span>&gt;</span>Join my readers' list<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span>, <span class="hljs-attr">id</span>=<span class="hljs-string">"mailing-list"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</div></code></pre>
 
     </body>
     </html>
