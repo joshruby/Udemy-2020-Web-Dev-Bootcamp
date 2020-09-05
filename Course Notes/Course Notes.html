@@ -30,23 +30,28 @@
 <ul>
 <li><a href="#udemy---2020-web-dev-bootcamp">Udemy - 2020 Web Dev Bootcamp</a>
 <ul>
-<li><a href="#introduction-to-html">Introduction to HTML</a>
+<li><a href="#html">HTML</a>
 <ul>
 <li><a href="#tags">Tags</a></li>
 <li><a href="#comments">Comments</a></li>
 <li><a href="#html-boilerplate">HTML Boilerplate</a></li>
-</ul>
-</li>
-<li><a href="#intermediate-html">Intermediate HTML</a>
-<ul>
 <li><a href="#tables">Tables</a></li>
 <li><a href="#forms">Forms</a></li>
 </ul>
 </li>
+<li><a href="#css">CSS</a>
+<ul>
+<li><a href="#values">Values</a></li>
+<li><a href="#browser-defaults">Browser Defaults</a></li>
+<li><a href="#inline-css">Inline CSS</a></li>
+<li><a href="#internal-css">Internal CSS</a></li>
+<li><a href="#external-css">External CSS</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="introduction-to-html">Introduction to HTML</h2>
+</li>
+</ul>
+<h2 id="html">HTML</h2>
 <p>Aggregated web dev doumentation can be found at <a href="http://devdocs.io">devdocs.io</a>.</p>
 <p>MDN uses thumbs down symbols to denote things that are deprecated.</p>
 <p>Emmet abbreviations can be found at <a href="http://emmet.io">emmet.io</a>.</p>
@@ -59,7 +64,6 @@
 <p>Meta tags are supplied in the <code>&lt;head&gt;</code> section of HTML files.</p>
 <p>Unicode UTF-8 (<code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>) should be used as the default encoding attribute. In addition to text scripts, Unicode also has other non-text symbols like emojis.</p>
 <p>The <code>description</code> meta-element attribute sets the text that will be displayed under the title of the webpage in search engine results.</p>
-<h2 id="intermediate-html">Intermediate HTML</h2>
 <h3 id="tables">Tables</h3>
 <p>Tables are used to display organized data or as a tool to style webpage elements direclty in HTML (or later in CSS). Header and footer rows can be called out explicitly or via <code>&lt;th&gt;</code> and <code>&lt;tf&gt;</code> tags. Most of the table styling attributes in HTML are deprecated. Styling should be done with CSS in practice.</p>
 <p>Tables can be nested inside of tables. This is useful if you want to keep blocks of information grouped together within a larger table. I.e., you can make a <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> x <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> table where each element <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mrow><mi>m</mi><mo separator="true">,</mo><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">T_{m, n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> is itself an arbitrarily sized table.</p>
@@ -71,6 +75,26 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span>, <span class="hljs-attr">id</span>=<span class="hljs-string">"mailing-list"</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 </div></code></pre>
+<p>Input elements can be given a <code>name</code> attribute in addition to an <code>id</code>. The <code>name</code> will be associated with the value of the input field (as a &quot;name/value&quot; pair) when the form is submitted. I.e., the <code>name</code> is a variable whose value is set by the input data.</p>
+<h2 id="css">CSS</h2>
+<h3 id="values">Values</h3>
+<p>Values can be specified absolutely, such as with a pixel value, or relatively, such as with a % or em (which is relative to the font size of the surrounding element).</p>
+<h3 id="browser-defaults">Browser Defaults</h3>
+<p>Even if you don't provide any CSS, some amount of styling will be done automatially by the browser. The default CSS attributes for HTML elements can be <a href="https://www.w3schools.com/cssref/css_default_values.asp">found here</a>. It's also possible to determine which CSS attributes are being applied to any HTML element by using the Chrome developer tools inspector or <em>Pesiticide</em> extension.</p>
+<p>If you attempt to style an element and see an unexpected result, a good first debugging step is to check which CSS attributes are being applied automatically and figure out how they relate to and interact with the attriubutes you specified.</p>
+<h3 id="inline-css">Inline CSS</h3>
+<p>CSS attributes can be passed directly in HTML tags, but generally speaking it's better to use internal or external CSS.</p>
+<h3 id="internal-css">Internal CSS</h3>
+<p>Internal CSS declarations can be made inside of HTML files by placing a <code>&lt;style&gt;</code> element between the <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> elements. Within <code>&lt;style&gt;</code>, CSS attributes are defined like this:</p>
+<pre><code class="language-HTML"><div> <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-tag">body</span> {
+      <span class="hljs-attribute">background-color</span>: blue;
+    }
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</div></code></pre>
+<p>This snippet will style the entire <code>body</code> element wit the specified <code>background-color</code>.</p>
+<p>Internal CSS only applies to the single HTML file it's specified in.</p>
+<h3 id="external-css">External CSS</h3>
 
     </body>
     </html>
