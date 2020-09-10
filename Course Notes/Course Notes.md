@@ -17,6 +17,8 @@
     - [Inline CSS](#inline-css)
     - [Internal CSS](#internal-css)
     - [External CSS](#external-css)
+    - [Selectors - Tags, Classes, and IDs](#selectors---tags-classes-and-ids)
+      - [Pseudo Classes](#pseudo-classes)
 
 ## HTML
 
@@ -98,3 +100,39 @@ This snippet will style the entire `body` element wit the specified `background-
 Internal CSS only applies to the single HTML file it's specified in.
 
 ### External CSS
+
+External .css files can be linked to an html file via self-closing `link` elements wihin the HTML `head` element like so:
+
+```HTML
+ <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Josh's Site</title>
+  </head>
+```
+
+Note that internal CSS overrules external CSS where there are collisions. The Chrome inspection tool will let you know which rules are being applied to any element and what their hierarchy is.
+
+### Selectors - Tags, Classes, and IDs
+
+Classes and ids are used to apply styles to specific elements.
+
+In general, the more specific the selector, the higher in the hierarchy it sits.
+
+Classes are specified with .s can be applied to any number of elements within an HTML file. A single element can also how multiple classes associted with it that are separated by spaces.
+
+Ids are specified with #s and can only be applied to one element per HTML file and each element can only be associated with one id.
+
+Classes are much more widely used than ids in practice.
+
+#### Pseudo Classes
+
+Some HTML elements change state when interacted with. Pseudo classes are used to change the display properties of elements only when they're in a particular state. All pseudo classes contain a leading colon.
+
+For example, to change an element's background color when it's hovered over, the `:hover` psuedo class is used:
+
+```CSS
+img:hover {
+    background-color: white;
+}
+```
