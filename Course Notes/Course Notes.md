@@ -12,6 +12,7 @@
     - [Tables](#tables)
     - [Forms](#forms)
     - [Divs](#divs)
+    - [Spans](#spans)
   - [CSS](#css)
     - [Values](#values)
     - [Browser Defaults](#browser-defaults)
@@ -73,6 +74,10 @@ Input elements can be given a `name` attribute in addition to an `id`. The `name
 ### Divs
 
 `Div` elements are used to create divisions within HTML files (i.e. groups of other elements) so that they can later be styled together using CSS. No styling is applied to divs by default.
+
+### Spans
+
+Spans, like divs, are used to group elements or sections of a single element so that they can be styled togther in CSS. By default, unlike divs, spans are "inline" elements rather than "block" elements ([more on this in the CSS section here)](#the-display-property). For example, a `<span>` can be used to style a selection of words in a paragaph without splitting the paragaph element up into different blocks.
 
 ## CSS
 
@@ -151,3 +156,11 @@ Content sits at the center, surounded by the padding. Outside of the padding sit
 When the height or width of an element is specified, only the content's dimensions are changed. The total size of the element is governed by the sum of the dimensions of the content, padding, border, and margin.
 
 ### The Display Property
+
+**Block** elements take up the entire page width by default but have configurable dimensions. Text elements are styled as blocks by default.
+
+**Inline** elements take up the minimum amount of space necesary to "span" their dimensions. As a result, the dimensions of inline elements cannot be explicitly set (e.g. you can't set an inline element to have a width of 100px). Common inline elements are `<span>`s, `<img>`s, and `<a>`s.
+
+**Inline-block** elements are displayed inline, but have configurable dimensions like block elements.
+
+**None** elements are hidden and removed from the webpage entirely. Setting `visbility: none;` is similar to `display: none;`, but retains the space that the element takes up on the page as blank space.
