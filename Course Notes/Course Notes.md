@@ -11,6 +11,7 @@
     - [HTML Boilerplate](#html-boilerplate)
     - [Tables](#tables)
     - [Forms](#forms)
+    - [Divs](#divs)
   - [CSS](#css)
     - [Values](#values)
     - [Browser Defaults](#browser-defaults)
@@ -19,6 +20,8 @@
     - [External CSS](#external-css)
     - [Selectors - Tags, Classes, and IDs](#selectors---tags-classes-and-ids)
       - [Pseudo Classes](#pseudo-classes)
+    - [The Box Model of Website Styling](#the-box-model-of-website-styling)
+    - [The Display Property](#the-display-property)
 
 ## HTML
 
@@ -66,6 +69,10 @@ Forms are used to collect user inputs. Within the `<form>` element `<input>`s el
 ```
 
 Input elements can be given a `name` attribute in addition to an `id`. The `name` will be associated with the value of the input field (as a "name/value" pair) when the form is submitted. I.e., the `name` is a variable whose value is set by the input data.
+
+### Divs
+
+`Div` elements are used to create divisions within HTML files (i.e. groups of other elements) so that they can later be styled together using CSS. No styling is applied to divs by default.
 
 ## CSS
 
@@ -136,3 +143,11 @@ img:hover {
     background-color: white;
 }
 ```
+
+### The Box Model of Website Styling
+
+Content sits at the center, surounded by the padding. Outside of the padding sits the border, followed by the margin (empty space between elements).
+
+When the height or width of an element is specified, only the content's dimensions are changed. The total size of the element is governed by the sum of the dimensions of the content, padding, border, and margin.
+
+### The Display Property
