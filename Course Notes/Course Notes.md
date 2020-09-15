@@ -23,6 +23,13 @@
       - [Pseudo Classes](#pseudo-classes)
     - [The Box Model of Website Styling](#the-box-model-of-website-styling)
     - [The Display Property](#the-display-property)
+    - [Positioning](#positioning)
+      - [Static](#static)
+      - [Relative](#relative)
+      - [Absolute](#absolute)
+      - [Fixed](#fixed)
+    - [Centering in CSS](#centering-in-css)
+    - [Fonts](#fonts)
 
 ## HTML
 
@@ -164,3 +171,48 @@ When the height or width of an element is specified, only the content's dimensio
 **Inline-block** elements are displayed inline, but have configurable dimensions like block elements.
 
 **None** elements are hidden and removed from the webpage entirely. Setting `visbility: none;` is similar to `display: none;`, but retains the space that the element takes up on the page as blank space.
+
+### Positioning
+
+#### Static
+
+Elements are statically positioned by default in the order they're written in HTML. If two elements are nested, the child will be positioned "on top" of the parent (imagine that there's a z-axis protruding perpendicular to the screen). The default static position can be overwritten if desired.
+
+#### Relative
+
+Relative positions are referenced to the default static position of each element.
+
+If an element is moved via relative positioning, it's new position will not affect any other elements' position. It's as if an invisble placeholder is kept in the original position of the moved element.
+
+Changing and element's relative-position is akin to modifying it's margin.
+
+#### Absolute
+
+Absolute positioning positions elements relative to their parent (which could be the entire `<body>`). Here, parent is defined as the closest parent element that is *relatively* positioned.
+
+Changing and element's absolute position is akin to modifying the margin between it and its parent.
+
+Unlike relatively-positioned elements, absolutely-positioned elements do change the flow of the webpage. They do not leave behind a "ghost" placeholder. I.e., they are taken "out of the flow" of the webpage, causing the other elements to be "re-flowed".
+
+#### Fixed
+
+Fixed-position elements stay in the positions they're placed at (via static, relative, or absolue positioning) even when the user changes the view of the webpage (such has by scrolling). E.g., think of a nav bar that maintains its position at the top of a webpage even when the user scrolls down to view other content.
+
+### Centering in CSS
+
+Setting `text-align: center;` in a *parent* element will center any children within it that don't have a specified width (e.g. block elements that span the entire width of the webpage or inline block elements).
+
+`auto` margin values can also be used like so:
+
+```CSS
+h1 {
+  margin: 0 auto;
+}
+```
+
+Here, the top and bottom margins will be 0 and the right and left margins will be automatically adjusted to center the element.
+
+Block elements with explicitly defined widths 
+
+### Fonts
+
