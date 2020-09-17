@@ -30,6 +30,8 @@
       - [Fixed](#fixed)
     - [Centering in CSS](#centering-in-css)
     - [Fonts](#fonts)
+      - [Font Embedding](#font-embedding)
+      - [Font Size](#font-size)
 
 ## HTML
 
@@ -212,7 +214,30 @@ h1 {
 
 Here, the top and bottom margins will be 0 and the right and left margins will be automatically adjusted to center the element.
 
-Block elements with explicitly defined widths 
-
 ### Fonts
 
+The `font-family` property takes a list of fonts that should range from specific to general. If a user's machine can't load the first font, it will try the second font in the list and so on.
+
+"Web-safe" fonts maximize the chance that users will have a consistent experience across operating systems.
+
+[CSS Font Stack](https://www.cssfontstack.com) provides statistics on the fonts intalled on various operating systems. It also conveniently provides a copyable list of "fall-backs" for each font.
+
+#### Font Embedding
+
+To avoid the "font falback" issue altogether, fonts can be packaged with the website code so that users' browsers will render the same fonts regardless of the fonts on their operating system.
+
+Embedded fonts are provded as links in the head of HTML files like so:
+
+```HTML
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+```
+
+Google Fonts is a great resource for finding fonts to embed or download.
+
+#### Font Size
+
+Sizes should be specified in relative units (% or em) rather than absolutely using px so that elements properly scale together. 1 em = 100% = 16 px.
+
+Sizes specified in em and % are *inherited* by child elements. E.g., if `font-size: 2em;` is specified in the `<body>` and then 2em is again specified in for `<h1>`s, the `<h1>` text will be 4em. This behavior can be overwritten by specifiying font sizes in rem or "root em".
+
+Long story short, rem is the preferred sizing unit.
